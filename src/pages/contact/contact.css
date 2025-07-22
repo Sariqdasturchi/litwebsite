@@ -1,0 +1,108 @@
+.registration-container {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.form-box label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #050b2c;
+  color: white;
+  font-size: 16px;
+}
+
+.info-text {
+  font-size: 12px;
+  color: #555;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #050b2c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 12px;
+  margin-bottom: 16px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.status-boxes {
+  display: flex;
+  gap: 10px;
+}
+
+.status-card {
+  flex: 1;
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.status-card .title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.group-status {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.filled {
+  color: red;
+  font-weight: 600;
+}
+
+.available {
+  color: green;
+  font-weight: 600;
+}
+
+.count {
+  font-weight: 600;
+}
+
+.total {
+  font-size: 24px;
+  font-weight: bold;
+}
