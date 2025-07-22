@@ -39,6 +39,7 @@
     color: black;
     padding: 20px;
     margin-bottom: 20px;
+    height: 475px;
 }
 
 .videoWrapper video {
@@ -103,22 +104,27 @@
     background: transparent;
     color: #0CC2D7;
 }
+
 .bottomText .kurs_two:hover {
     background: transparent;
     color: #0CC2D7;
 }
+
 .bottomText .kurs:active {
     background: #0CC2D7;
     color: #FFF;
 }
+
 .bottomText .kurs_two:active {
     background: #0CC2D7;
     color: #FFF;
 }
+
 .bottomText .kurs:focus {
     background: #0CC2D7;
     color: #FFF;
 }
+
 .bottomText .kurs_two:focus {
     background: #0CC2D7;
     color: #FFF;
@@ -128,7 +134,69 @@
     background: #0CC2D7;
     color: #FFF;
 }
+
 .bottomText .kurs_two:disabled {
     background: #0CC2D7;
     color: #FFF;
+}
+
+
+@media screen and (max-width: 422px) {
+    .karusel {
+        height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+    }
+
+    .karuselContainers {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .karuselText h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .karuselText h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .videoWrapper {
+        height: 383px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .videoWrapper h1 {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .videoWrapper p {
+        font-size: 14px;
+    }
+
+    .bottomText p {
+        font-size: 14px;
+        padding: 0 10px;
+        font-weight: 400;
+    }
+
+    .bottomText .btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bottomText .kurs,
+    .bottomText .kurs_two {
+        width: 90%;
+        font-size: 14px;
+        height: 40px;
+    }
+    .thumbnail-swiper{
+        width: 90%;
+        overflow: hidden;
+    }
 }

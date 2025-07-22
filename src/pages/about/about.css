@@ -77,3 +77,40 @@
     transition: 0.5s;
 }
 
+@media screen and (max-width: 422px) {
+    .about {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .aboutContainer {
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+
+    .aboutText {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .aboutImages {
+        margin-bottom: 20px;
+    }
+
+    .aboutImage p {
+        font-size: 12px;
+    }
+
+    .aboutButton {
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .aboutButton button {
+        width: 90%;
+        height: 40px;
+        font-size: 14px;
+    }
+}

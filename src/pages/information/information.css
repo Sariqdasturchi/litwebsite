@@ -41,5 +41,43 @@
 .logotip{
     width: 100%;
     height: 80vh;
-    position: relative;
+}
+
+@media screen and (max-width: 422px) {
+    .information {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .information .container {
+        width: 95%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .information h1 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .containerText {
+        position: relative;
+        font-size: 13px;
+        text-align: start;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+    .logotip{
+        position: absolute;
+    }
+    .logotip img {
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+    }
+
+    .check,
+    .undov {
+        font-size: 14px;
+    }
 }

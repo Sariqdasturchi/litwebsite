@@ -9,28 +9,28 @@ import './karusel.css';
 const videos = [
     {
         src: video1,
-        title: "#1 Arxitektura va dizayn bo’yicha kuchli bilimga ega bo’lasiz",
-        desc: "Biz sizni 0 dan boshlab o‘rgatamiz. Bu yerda sizga “avval bilishing kerak” degan shart yo‘q. Har bir dastur, har bir chizma sodda tushuntiriladi va sizning darajangizga moslab beriladi."
+        title: "Arxitektura va dizayn bo’yicha kuchli bilimga ega bo’lasiz  ",
+        desc: "Biz sizni 0 dan boshlab o‘rgatamiz. Bu yerda sizga “avval bilishing kerak” degan shart yo‘q.Har bir dastur, har bir chizma sodda tushuntiriladi va sizning darajangizga moslab beriladi."
     },
     {
         src: video2,
-        title: "#2 Arxitektura va dizayn bo’yicha kuchli bilimga ega bo’lasiz",
-        desc: "Biz sizni 0 dan boshlab o‘rgatamiz. Bu yerda sizga “avval bilishing kerak” degan shart yo‘q. Har bir dastur, har bir chizma sodda tushuntiriladi va sizning darajangizga moslab beriladi."
+        title: "Qo’lizda tayyor Portfolio bo’ladi  ",
+        desc: "Bu portfolio Ichida oddiy sinov yoki imtihon uchun qilgan dizaynlaringiz emas balkim real loyihalarda tayyorlagan dizaynlaringiz portfoliosi bo’ladi."
     },
     {
         src: video3,
-        title: "#3 Arxitektura va dizayn bo’yicha kuchli bilimga ega bo’lasiz",
-        desc: "Biz sizni 0 dan boshlab o‘rgatamiz. Bu yerda sizga “avval bilishing kerak” degan shart yo‘q. Har bir dastur, har bir chizma sodda tushuntiriladi va sizning darajangizga moslab beriladi."
+        title: "Ishga tayyorgarlik  ",
+        desc: "Kurs davomida siz faqat kompyuter oldida o’tirib o’rganmaysiz, balki qurulish joylariga borib, o’lchamlar, dizayn, muzokaralarni o’rganib, mustaqil ishlashni o’rganasiz."
     },
     {
         src: video4,
-        title: "#4 Arxitektura va dizayn bo’yicha kuchli bilimga ega bo’lasiz",
-        desc: "Biz sizni 0 dan boshlab o‘rgatamiz. Bu yerda sizga “avval bilishing kerak” degan shart yo‘q. Har bir dastur, har bir chizma sodda tushuntiriladi va sizning darajangizga moslab beriladi."
+        title: "Seminarlar ",
+        desc: "Kurs davomida O’zbekistondagi top mutaxassislardan maxsus seminarlar bo’lib o’tib siz bu seminarlaarda qatnashib qo’shimcha kuchli bilimlarga ega bo’lasiz"
     },
     {
         src: video5,
-        title: "#5 Arxitektura va dizayn bo’yicha kuchli bilimga ega bo’lasiz",
-        desc: "Biz sizni 0 dan boshlab o‘rgatamiz. Bu yerda sizga “avval bilishing kerak” degan shart yo‘q. Har bir dastur, har bir chizma sodda tushuntiriladi va sizning darajangizga moslab beriladi."
+        title: "Ekskursiyalar ",
+        desc: "Turli Arxitektura firmalar va dizayn studiolarga ekskursiyaga borasiz. Bu sizga real ishda tajribangizni oshirishga yordam beradi."
     }
 ];
 
@@ -42,7 +42,7 @@ export default function Karusel() {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % videos.length);
-        }, 15000);
+        }, 8000);
         return () => clearInterval(interval);
     }, []);
 
@@ -78,7 +78,7 @@ export default function Karusel() {
                     </div>
 
                     <div className="videoWrapper">
-                        <video ref={videoRef} width="100%" height="auto" autoplay>
+                        <video ref={videoRef} width="100%" height="auto" autoPlay muted>
                             <source src={videos[index].src} type="video/mp4" />
                         </video>
                         <h1>{videos[index].title}</h1>
