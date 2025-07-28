@@ -29,7 +29,7 @@ export default function About() {
                         </div>
                     </div>
                     <div className="aboutButton">
-                        <button><a href="#oquv">Seminarga qatnashish</a></button>
+                        <button><a href="#kurs">Seminarga qatnashish</a></button>
                     </div>
                 </div>
             </section>
