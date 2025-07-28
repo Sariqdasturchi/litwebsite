@@ -1,202 +1,158 @@
 .karusel {
     width: 100%;
-    height: 90vh;
-    background-color: #010317;
-    color: white;
+    height: 100%;
+    background: #010317;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
-
-.karuselContainers {
-    width: 80%;
-    display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.karuselContainer {
-    width: 100%;
-}
-
-.karuselText h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+.containersText {
+    width: 90%;
+    height: auto;
     color: white;
+    margin-top: 20px;
 }
 
-.karuselText h1 {
+.containersText h1 {
     font-size: 22px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: start;
     color: #0CC2D7;
+    margin-top: 10px;
 }
 
-.videoWrapper {
+.containersText h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: start;
+    margin: 0;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.mySwiper {
+    padding-bottom: 40px;
+}
+
+.card {
+    background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0px 10px 0px #0CC2D7;
-    background: white;
-    color: black;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 475px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+    border: 2px solid #00ffff;
+    transition: transform 0.3s;
+    height: 464px;
 }
 
-.videoWrapper video {
-    border-radius: 20px;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.videoWrapper h1 {
-    margin-top: 20px;
-    font-size: 20px;
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.video-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
     font-weight: 700;
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px 15px;
+    border-radius: 10px;
 }
 
-.videoWrapper p {
-    font-size: 16px;
-    color: #444;
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #333;
+}
+
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-button-prev {
+    display: none;
 }
 
 .bottomText {
+    width: 90%;
+    height: auto;
+    color: white;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    width: 100%;
+    margin-bottom: 30px;
 }
-
-.bottomText p {
+.bottomText p{
     font-size: 16px;
     color: #FFFFFFFF;
     font-weight: mixed;
-    opacity: 0.9;
 }
-
-.bottomText .btn {
+.bottomText .btn{
+    width: 100%;
+    height: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    padding: 0;
+    gap: 10px;
 }
-
-.bottomText .kurs {
+.bottomText .btn button{
     width: 100%;
-    height: 36px;
-    border: 1px solid #0CC2D7;
-    color: #0CC2D7;
+    height: 100%;
+    background-color: white;
+    border: none;
     border-radius: 10px;
-    font-size: 15px;
-    font-weight: 700;
-    transition: all 0.3s ease-in-out;
+    color: #00ffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #00ffff;
 }
-
-.bottomText .kurs_two {
-    width: 100%;
-    height: 36px;
-    color: #0CC2D7;
-    border: 1px solid #0CC2D7;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: all 0.3s ease-in-out;
+.bottomText .btn button:hover{
+    background-color: transparent;
+    border: 1px solid #00ffff;
+    color: #00ffff;
 }
-
-.bottomText .kurs:hover {
-    background: transparent;
-    color: #0CC2D7;
+.bottomText .btn button:nth-child(1){
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    border: 1px solid #00ffff;
+    color: #00ffff;
 }
-
-.bottomText .kurs_two:hover {
-    background: transparent;
-    color: #0CC2D7;
-}
-
-.bottomText .kurs:active {
-    background: #0CC2D7;
-    color: #FFF;
-}
-
-.bottomText .kurs_two:active {
-    background: #0CC2D7;
-    color: #FFF;
-}
-
-.bottomText .kurs:focus {
-    background: #0CC2D7;
-    color: #FFF;
-}
-
-.bottomText .kurs_two:focus {
-    background: #0CC2D7;
-    color: #FFF;
-}
-
-.bottomText .kurs:disabled {
-    background: #0CC2D7;
-    color: #FFF;
-}
-
-.bottomText .kurs_two:disabled {
-    background: #0CC2D7;
-    color: #FFF;
-}
-
-
-@media screen and (max-width: 422px) {
-    .karusel {
-        height: auto;
-        padding: 20px 0;
-        flex-direction: column;
-    }
-
-    .karuselContainers {
-        width: 80%;
-        flex-direction: column;
-    }
-
-    .karuselText h2 {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-
-    .karuselText h1 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .videoWrapper {
-        height: 383px;
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    .videoWrapper h1 {
-        font-size: 16px;
-        margin-top: 15px;
-    }
-
-    .videoWrapper p {
-        font-size: 14px;
-    }
-
-    .bottomText p {
-        font-size: 14px;
-        padding: 0 10px;
-        font-weight: 400;
-    }
-
-    .bottomText .btn {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .bottomText .kurs,
-    .bottomText .kurs_two {
-        width: 90%;
-        font-size: 14px;
-        height: 40px;
-    }
-    .thumbnail-swiper{
-        width: 90%;
-        overflow: hidden;
-    }
+.bottomText .btn button:nth-child(1):hover{
+    transition: background-color 0.3s ease;
+    background-color: white;
+    border: 1px solid #00ffff;
+    color: #00ffff;
 }

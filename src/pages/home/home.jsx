@@ -14,7 +14,7 @@ export default function Home() {
                         <img src={background} alt="" />
                     </div>
                     <div className="homeButton">
-                        <p><b>Arxitekturani 0 dan</b>o’rganing va <b> 8 oydan keyin, ishga tayyor,</b>portfolioga ega mutaxassisga aylaning</p>
+                        <p><b>Arxitekturani 0 dan </b>o’rganing va <b> 8 oydan keyin, ishga tayyor, </b>portfolioga ega mutaxassisga aylaning</p>
                         <p>Bepul seminarga qatnashib, barchasiga o’ziz ishonch hosil qiling.</p>
                         <button>Bepul seminarga qatnashish</button>
                     </div>

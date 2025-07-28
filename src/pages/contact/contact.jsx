@@ -8,6 +8,7 @@ export default function Contact() {
   });
 
   const [error, setError] = useState('');
+  const [registeredCount, setRegisteredCount] = useState(0); 
 
   const handleChange = (e) => {
     setForm({
@@ -29,9 +30,10 @@ export default function Contact() {
       return;
     }
 
-
     setError('');
     alert("Muvaffaqiyatli ro'yxatdan o'tdingiz!");
+
+    setRegisteredCount(prev => prev + 1);
 
     setForm({
       name: '',
@@ -80,16 +82,16 @@ export default function Contact() {
           <p className="title">Guruh joylar soni:</p>
           <div className="group-status">
             <span className="filled">To‘ldi</span>
-            <span className="count">45 × 18</span>
+            <span className="count">0</span>
           </div>
           <div className="group-status">
             <span className="available">Bo'sh</span>
-            <span className="count">10 ta</span>
+            <span className="count">0</span>
           </div>
         </div>
         <div className="status-card">
           <p className="title">Seminarga ro’yxatdan o’tdi</p>
-          <span className="count total">22 ta</span>
+          <span className="count total">{registeredCount} ta</span>
         </div>
       </div>
     </div>

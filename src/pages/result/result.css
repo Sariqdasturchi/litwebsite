@@ -41,7 +41,14 @@
 }
 
 .selected-card {
-  margin-bottom: 40px;
+  width: 80%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 12px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .selected-img {
@@ -57,6 +64,118 @@
   font-size: 22px;
   font-weight: bold;
 }
+.selected-works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.work-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 100px;
+}
+
+.work-img, .modal-img, .thumb-card img {
+  width: 100%;
+  image-rendering: auto;
+  display: block;
+  max-width: 100%;
+}
+.section-line {
+  border: none;
+  border-top: 2px dashed #000000;
+  margin: 24px 0;
+  width: 100%;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  width: 95%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto; 
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+.modal-content::before {
+  content: "";
+  position: sticky;
+  top: 0;
+  height: 20px;
+  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.modal-content::after {
+  content: "";
+  position: sticky;
+  bottom: 0;
+  height: 20px;
+  background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 10px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.close-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 
 .thumbnail-swiper {
   padding: 20px 0;
@@ -91,12 +210,15 @@
   font-size: 18px;
   color: #bbb;
   font-weight: bold;
+  width: 80%;
+  border: none;
+  background: transparent;
 }
 
 hr {
   width: 30%;
   border: 1px solid white;
-  margin-top: -10px;
+  margin-top: 5px;
   margin-bottom: 30px;
   z-index: 100000000;
 }
@@ -173,7 +295,7 @@ hr {
 
   .selected-img {
     width: 90%;
-    height: auto;
+    height: 149.83px;
     max-width: 280px;
     border-radius: 10px;
   }

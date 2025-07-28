@@ -98,9 +98,12 @@
     .aboutImages {
         margin-bottom: 20px;
     }
+    .aboutText h1{
+        font-size: 18px;
+    }
 
     .aboutImage p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .aboutButton {
