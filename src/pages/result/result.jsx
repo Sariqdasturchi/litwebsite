@@ -160,7 +160,7 @@ export default function Result() {
 
 
   return (
-    <section className="result">
+    <section className="result" id='oquv'>
       <div className="custom-result">
         <div className="text">
           <h1>O’quvchilarimiz natijasi</h1>

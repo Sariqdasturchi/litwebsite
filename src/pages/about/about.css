@@ -58,20 +58,27 @@
     color: #0CC2D7;
     font-weight: bold;
 }
-.aboutButton button:hover {
+button a{
+    color: #0CC2D7;
+    text-decoration: none;
+}
+button a:hover{
+    color: white;
+}
+.aboutButton button:hover  {
     background-color: #0CC2D7;
     color: white;
     transition: 0.5s;
 }
-.aboutButton button:active {
+.aboutButton button a:active {
     background-color: #0CC2D7;
     color: white;
     transition: 0.5s;
 }
-.aboutButton button:focus {
+.aboutButton button :focus {
     outline: none;
 }
-.aboutButton button:disabled {
+.aboutButton button :disabled {
     background-color: #0CC2D7;
     color: white;
     transition: 0.5s;

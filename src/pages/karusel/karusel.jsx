@@ -61,7 +61,6 @@ export default function Karusel() {
                             <div className="card">
                                 <div className="video-wrapper">
                                     <video src={item.video} autoPlay loop muted playsInline />
-                                    <div className="video-label">VIDEO</div>
                                 </div>
                                 <div className="card-content">
                                     <h3>{item.title}</h3>
@@ -75,8 +74,8 @@ export default function Karusel() {
             <div className="bottomText">
                 <p> Siz bizning kursimizda o’qish uchun to’lov qilmaysiz balki kelajakda o’ziz xohlagan kasbda ishlash uchun <b>investitsiya</b> kiritasiz</p>
                 <div className="btn">
-                    <button>Kursga yozilish</button>
-                    <button>O’quvchilar natijasi</button>
+                    <button className='kurs'><a href="#kurs">Kursga yozilish</a></button>
+                    <button className='oquv'><a href="#oquv">O’quvchilar natijasi</a></button>
                 </div>
             </div>
         </section>

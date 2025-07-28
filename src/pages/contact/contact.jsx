@@ -42,7 +42,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="registration-container">
+    <div className="registration-container" id='kurs'>
       <h2>Seminarda qatnashish uchun ro'yxatdan o'ting</h2>
       <form className="form-box" onSubmit={handleSubmit}>
         {error && <p className="form-error">{error}</p>}
