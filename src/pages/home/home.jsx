@@ -7,7 +7,7 @@ export default function Home() {
         <>
             <section className="home">
                 <div className="homeText">
-                    <h1 className="Texth">17-18 iyul, yangi guruh <br /> uchun <span>Bepul Seminar</span> </h1>
+                    <h1 className="Texth">19-20 Sentabr, yangi guruh <br /> uchun <span>Bepul Seminar</span> </h1>
                 </div>
                 <div className="homeContainer">
                     <div className="homeImage">

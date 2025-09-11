@@ -78,7 +78,7 @@ export default function Contact() {
       </div>
 
       <div className="status-boxes">
-        <div className="status-card">
+        {/* <div className="status-card">
           <p className="title">Guruh joylar soni:</p>
           <div className="group-status">
             <span className="filled">To‘ldi</span>
@@ -87,13 +87,13 @@ export default function Contact() {
           <div className="group-status">
             <span className="available">Bo'sh</span>
             <span className="count">0</span>
-          </div>
+          </div> */}
         </div>
         <div className="status-card">
           <p className="title">Seminarga ro’yxatdan o’tdi</p>
           <span className="count total">{registeredCount} ta</span>
         </div>
       </div>
-    </div>
+    
   );
 }
