@@ -17,7 +17,7 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!form.name || !form.phone) {
@@ -31,14 +31,28 @@ export default function Contact() {
     }
 
     setError('');
-    alert("Muvaffaqiyatli ro'yxatdan o'tdingiz!");
 
-    setRegisteredCount(prev => prev + 1);
-
-    setForm({
-      name: '',
-      phone: ''
-    });
+    // Send data to SheetDB API
+    try {
+      const response = await fetch('https://sheetdb.io/api/v1/f2nx9piq1kzll', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          data: [{ name: form.name, phone: form.phone }]
+        })
+      });
+      if (response.ok) {
+        alert("Muvaffaqiyatli ro'yxatdan o'tdingiz!");
+        setRegisteredCount(prev => prev + 1);
+        setForm({ name: '', phone: '' });
+      } else {
+        setError("Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.");
+      }
+    } catch (err) {
+      setError("Serverga ulanishda xatolik. Iltimos, internetni tekshiring.");
+    }
   };
 
   return (
