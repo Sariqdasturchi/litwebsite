@@ -78,16 +78,6 @@ export default function Contact() {
       </div>
 
       <div className="status-boxes">
-        {/* <div className="status-card">
-          <p className="title">Guruh joylar soni:</p>
-          <div className="group-status">
-            <span className="filled">To‘ldi</span>
-            <span className="count">0</span>
-          </div>
-          <div className="group-status">
-            <span className="available">Bo'sh</span>
-            <span className="count">0</span>
-          </div> */}
         </div>
         <div className="status-card">
           <p className="title">Seminarga ro’yxatdan o’tdi</p>
