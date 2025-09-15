@@ -89,10 +89,7 @@ export default function Contact() {
       </form>
 
       <div className="status-boxes"></div>
-      <div className="status-card">
-        <p className="title">Seminarga ro’yxatdan o’tdi</p>
-        <span className="count total">{localStorage.getItem("registered")} ta</span>
-      </div>
+     
     </div>
   );
 }

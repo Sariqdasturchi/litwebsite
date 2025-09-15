@@ -1,14 +1,96 @@
-import React from 'react'
-import pitichka from '../../assets/pitichka.png'
-import './about.css'
-import Contact from '../contact/contact'
+import React, { useState } from "react";
+import '../contact/contact.css'
 
 export default function About() {
+      const [form, setForm] = useState({
+        name: "",
+        phone: "",
+      });
+    
+      const [error, setError] = useState("");
+      const [registeredCount, setRegisteredCount] = useState(0);
+    
+      const handleChange = (e) => {
+        setForm({
+          ...form,
+          [e.target.name]: e.target.value,
+        });
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        if (!form.name || !form.phone) {
+          setError("Iltimos, barcha maydonlarni to'ldiring.");
+          return;
+        }
+    
+        setError("");
+    
+        // Send data to SheetDB API
+        try {
+          const response = await fetch("https://sheetdb.io/api/v1/t85ry5jwag61s", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "SheetDB-Auth": "o2xeovshccim5l06ygvspphq3i4rbph4zvsc41ag",
+            },
+            body: JSON.stringify({
+              data: [{ name: form.name, phone: form.phone }],
+            }),
+          });
+          console.log(response);
+          
+          if (response.ok) {
+            alert("Muvaffaqiyatli ro'yxatdan o'tdingiz!");
+            localStorage.setItem("registered", registeredCount + 1);
+            setRegisteredCount(registeredCount + 1);
+            setForm({ name: " ", phone: " " });
+          } else {
+            setError("Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.");
+          }
+        } catch (err) {
+          setError("Serverga ulanishda xatolik. Iltimos, internetni tekshiring.");
+        }
+      };
     return (
         <>
-            <section className="about">
-                <Contact />
-            </section>
+             <div className="registration-container" id="kurs">
+      <h2>Seminarda qatnashish uchun ro'yxatdan o'ting</h2>
+      <form className="form-box" onSubmit={handleSubmit}>
+        {error && <p className="form-error">{error}</p>}
+
+        <label>Ismingiz</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Ubaydullo"
+          value={form.name}
+          onChange={handleChange}
+        />
+
+        <label>Raqamingiz</label>
+        <input
+          type="tel"
+          name="phone"
+          placeholder="+998912345678"
+          value={form.phone}
+          onChange={handleChange}
+        />
+
+        <p className="info-text">
+          Ma’lumotlaringiz sir saqlanadi. Siz bilan faqat kurs bo‘yicha aloqaga
+          chiqamiz
+        </p>
+
+        <button type="submit" className="submit-btn">
+          Davom etish...
+        </button>
+      </form>
+
+      <div className="status-boxes"></div>
+     
+    </div>
         </>
     )
 }
