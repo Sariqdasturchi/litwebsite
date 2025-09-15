@@ -25,13 +25,6 @@ export default function Contact() {
       return;
     }
 
-    if (form.phone.length < 13) {
-      setError(
-        "Telefon raqami kamida 13 ta belgidan iborat bo'lishi kerak. (+998 bilan birga)"
-      );
-      return;
-    }
-
     setError("");
 
     // Send data to SheetDB API
@@ -50,7 +43,8 @@ export default function Contact() {
       
       if (response.ok) {
         alert("Muvaffaqiyatli ro'yxatdan o'tdingiz!");
-        setRegisteredCount((prev) => prev + 1);
+        localStorage.setItem("registered", registeredCount + 1);
+        setRegisteredCount(registeredCount + 1);
         setForm({ name: " ", phone: " " });
       } else {
         setError("Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.");
@@ -94,16 +88,10 @@ export default function Contact() {
         </button>
       </form>
 
-      <div className="note">
-        <strong>Diqqat!</strong> <br />
-        Faqat 1 ta guruh qabul qilinadi. Guruhda 12 ta o‘quvchi bo‘ladi.
-        Shoshiling, guruhga qo‘shilishga ulgurib qoling!
-      </div>
-
       <div className="status-boxes"></div>
       <div className="status-card">
         <p className="title">Seminarga ro’yxatdan o’tdi</p>
-        <span className="count total">{registeredCount} ta</span>
+        <span className="count total">{localStorage.getItem("registered")} ta</span>
       </div>
     </div>
   );

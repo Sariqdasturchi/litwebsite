@@ -66,20 +66,23 @@ h2 {
 .status-boxes {
   display: flex;
   gap: 10px;
+  color: white;
 }
 
 .status-card {
   flex: 1;
-  background: #f5f5f5;
+  background: #050b2c;
   border-radius: 12px;
   padding: 12px;
   text-align: center;
+  color: white;
 }
 
 .status-card .title {
   font-weight: bold;
   font-size: 14px;
   margin-bottom: 8px;
+  color: white;
 }
 
 .group-status {
