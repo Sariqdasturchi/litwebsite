@@ -55,6 +55,13 @@ h2 {
   cursor: pointer;
 }
 
+.submit-btn:hover {
+  background-color: #fff;
+  border: 1px solid #050b2c;
+  color: black;
+  transition: .5s ease-in-out;
+}
+
 .note {
   font-size: 12px;
   margin-bottom: 16px;
