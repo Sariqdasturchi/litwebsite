@@ -8,6 +8,7 @@ export default function Contact() {
   });
 
   const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
   const [registeredCount, setRegisteredCount] = useState(0);
 
   const handleChange = (e) => {
@@ -42,7 +43,7 @@ export default function Contact() {
       console.log(response);
       
       if (response.ok) {
-        alert("Muvaffaqiyatli ro'yxatdan o'tdingiz!");
+        setMessage("Muvaffaqiyatli ro'yxatdan o'tdingiz!");
         localStorage.setItem("registered", registeredCount + 1);
         setRegisteredCount(registeredCount + 1);
         setForm({ name: " ", phone: " " });
@@ -78,10 +79,7 @@ export default function Contact() {
           onChange={handleChange}
         />
 
-        <p className="info-text">
-          Ma’lumotlaringiz sir saqlanadi. Siz bilan faqat kurs bo‘yicha aloqaga
-          chiqamiz
-        </p>
+       { message && <p className="form-message" style={{color: 'green', fontSize: '18px'}}>{message}</p> }
 
         <button type="submit" className="submit-btn">
           Davom etish...

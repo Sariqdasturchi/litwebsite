@@ -219,9 +219,7 @@ export default function Result() {
           <p className='footer-malumot'>
             Siz ham bizning talabalar safiga qo’shilmoqchi <br /> bo’lsangiz, sizni 4-5 iyul kuni bo’ladigan bepul <br /> seminarga taklif qilamiz
           </p>
-          <div className="footer_btn">
-            <button>Seminarga qatnashish</button>
-          </div>
+          
         </div>
       </div>
           
